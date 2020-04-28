@@ -7,11 +7,9 @@ namespace CoVID19
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             var json = GetJSONData("https://api.covid19india.org/raw_data.json");
-
             Console.WriteLine(json.Content.ReadAsStringAsync().Result);
+
         }
 
         static HttpResponseMessage GetJSONData(string uri)
